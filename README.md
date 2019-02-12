@@ -31,4 +31,4 @@ Para el UML
 ## Autores
 
 * **Pablo Sao** - [psao](https://github.com/psao)
-* **Ricardo Valenzuela** - [ricardoVA999]
+* **Ricardo Valenzuela** - ricardoVA999
