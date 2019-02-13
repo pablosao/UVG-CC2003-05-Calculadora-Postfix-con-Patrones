@@ -1,3 +1,4 @@
+
 public class SinglyLinkedList<E> extends abstractList<E>
 {
 
@@ -78,3 +79,4 @@ public class SinglyLinkedList<E> extends abstractList<E>
       }
       return finger != null;
    }
+}
