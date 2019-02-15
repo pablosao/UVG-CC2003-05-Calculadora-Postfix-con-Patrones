@@ -3,8 +3,7 @@
 
 import java.util.Vector;
 
-public class Pila <E>
-implements iPila<E> {
+public class Pila <E> extends abstractPila<E>{
 
     protected Vector<E> vec;
     
