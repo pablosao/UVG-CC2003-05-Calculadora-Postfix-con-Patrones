@@ -15,6 +15,11 @@ public class PostfixFactory {
     //identificador de los delimitadores para eliminarse en la informacion
     final static String DELIMITADOR = " \t\n\r\fABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz|°!\"#$%&()=?¡¿'\\´¨[]{}_-:.;,^`¬~";
     
+    final static FactoryStack FACTORY = new FactoryStack();
+    
+    static AbstractList pila = null;
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -38,6 +43,19 @@ public class PostfixFactory {
             
             System.out.print("Ingrese opción: ");
             switch(Keyboard.readInt()){
+                
+                case 1:
+                    
+                    break;
+                case 2:
+                    
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
                 case 6:
                     System.out.println("\n\n\tSaliendo del cálculo");
                     control_global = false;
