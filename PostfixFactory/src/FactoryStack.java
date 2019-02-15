@@ -13,7 +13,7 @@ public class FactoryStack<E> {
         }
             return null;
         }    
-    public abstractList<E> factoryList(String tipo){
+    public AbstractList<E> factoryList(String tipo){
         if (tipo.equals("SL")) {
             return new SinglyLinkedList<E>();
         }
