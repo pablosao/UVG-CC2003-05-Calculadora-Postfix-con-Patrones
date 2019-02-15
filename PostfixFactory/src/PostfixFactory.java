@@ -45,18 +45,22 @@ public class PostfixFactory {
             switch(Keyboard.readInt()){
                 
                 case 1:
-                    pila = FACTORY.factoryPila("1");
-                    calcData();
+                    calcData(FACTORY.factoryPila("1"),1);
                     break;
                 case 2:
-                    pila = FACTORY.factoryPila("2");
-                    calcData();
+                    calcData(FACTORY.factoryPila("2"),1);
                     break;
                 case 3:
+                    calcData(FACTORY.factoryList("SL"),2);
+                    
                     break;
                 case 4:
+                    calcData(FACTORY.factoryList("DL"),2);
+                                       
                     break;
                 case 5:
+                    calcData(FACTORY.factoryList("CL"),2);
+                    
                     break;
                 case 6:
                     System.out.println("\n\n\tSaliendo del cálculo");
@@ -71,10 +75,18 @@ public class PostfixFactory {
     }
     
    
-    private static void calcData() throws IOException, FileNotFoundException{
+    private static void calcData(Object objeto,int opcion) throws IOException, FileNotFoundException{
         //iPila pila = new Pila();
         
         iCalculadora calc = new Calculadora();
+        
+        if(opcion == 1){
+            abstractPila pila = (abstractPila)objeto;
+        }
+        else{
+            AbstractList pila = (AbstractList)objeto;
+        }
+        
         
         double res = 0;
         double a, b;
@@ -199,6 +211,7 @@ public class PostfixFactory {
         }
         System.out.println("Resultado final: " + Double.toString(res));
     }
+    
     
     
     
