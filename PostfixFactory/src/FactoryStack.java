@@ -3,7 +3,7 @@
  *
  * @author Satellite
  */
-public class FactoryStack {
+public class FactoryStack<E> {
     public abstractPila factoryPila(String tipo){
         if (tipo.equals("1")) {
             return new Pila<String>();
@@ -13,9 +13,9 @@ public class FactoryStack {
         }
             return null;
         }    
-    public abstractList factoryList(String tipo){
+    public abstractList<E> factoryList(String tipo){
         if (tipo.equals("SL")) {
-            return new SinglyLinkedList<>();
+            return new SinglyLinkedList<E>();
         }
         else if(tipo.equals("DL")){
             return new DoublyLinkedList<>();
