@@ -19,8 +19,39 @@ public class PostfixFactory {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
-        iPila pila = new Pila();
         
+        //Variable de control 
+        boolean control_global = true;
+        
+        //Iniciando el programa con el menu
+        
+        while(control_global){
+            
+            //Desplegando menu en la linea de comando
+            System.out.println("\nIntrese el número de la opción a implementar que desea utilizar:\n");
+            System.out.println("1. Vector");
+            System.out.println("2. Arraylist");
+            System.out.println("3. Lista Singlenton)");
+            System.out.println("4. Lista Circular");
+            System.out.println("5. Lista Doble Encadenada");
+            System.out.println("6. Salir");
+            
+            System.out.print("Ingrese opción: ");
+            switch(Keyboard.readInt()){
+                case 6:
+                    System.out.println("\n\n\tSaliendo del cálculo");
+                    control_global = false;
+                    break;
+            }
+            
+        }
+        
+        
+    }
+    
+    
+    private static void calcData() throws IOException, FileNotFoundException{
+        iPila pila = new Pila();
         iCalculadora calc = new Calculadora();
         
         double res = 0;
@@ -145,15 +176,16 @@ public class PostfixFactory {
 
         }
         System.out.println("Resultado final: " + Double.toString(res));
-        
     }
+    
+    
     
     /***
      * Metodo para obtener en un string toda la información contenida dentro del archivo .txt
      * 
      * @return String todos los datos ingresados en el archivo de texto 
      */
-    private static String getDataFile() throws IOException, FileNotFoundException{
+    public static String getDataFile() throws IOException, FileNotFoundException{
         
         BufferedReader reader;
         File file;
