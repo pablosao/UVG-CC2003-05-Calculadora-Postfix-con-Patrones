@@ -17,7 +17,7 @@ public class PostfixFactory {
     
     final static FactoryStack FACTORY = new FactoryStack();
     
-    static AbstractList pila = null;
+    static abstractPila pila = null;
     
     
     /**
@@ -45,10 +45,12 @@ public class PostfixFactory {
             switch(Keyboard.readInt()){
                 
                 case 1:
-                    
+                    pila = FACTORY.factoryPila("1");
+                    calcData();
                     break;
                 case 2:
-                    
+                    pila = FACTORY.factoryPila("2");
+                    calcData();
                     break;
                 case 3:
                     break;
@@ -60,16 +62,18 @@ public class PostfixFactory {
                     System.out.println("\n\n\tSaliendo del cálculo");
                     control_global = false;
                     break;
+                    
             }
-            
+
         }
         
         
     }
     
-    
+   
     private static void calcData() throws IOException, FileNotFoundException{
-        iPila pila = new Pila();
+        //iPila pila = new Pila();
+        
         iCalculadora calc = new Calculadora();
         
         double res = 0;
