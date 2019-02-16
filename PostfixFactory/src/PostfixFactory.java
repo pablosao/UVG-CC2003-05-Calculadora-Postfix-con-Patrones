@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
 public class PostfixFactory {
     
     //final static String PATH_DATOS = "datos.txt";
-    final static String PATH_DATOS = "c:\\datos.txt";
+    final static String PATH_DATOS = "C:\\Users\\Satellite\\Documents\\U\\Orientacion a objetos\\datos.txt";
     //identificador de los delimitadores para eliminarse en la informacion
     final static String DELIMITADOR = " \t\n\r\fABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz|°!\"#$%&()=?¡¿'\\´¨[]{}_-:.;,^`¬~";
     
@@ -173,7 +173,9 @@ public class PostfixFactory {
                                         break;
 
                                     } else {
-                                        res = calc.dividir((double)pila1.pop(), (double)pila1.pop());
+                                        double val1 = (double)pila1.pop();
+                                        double val2 = (double)pila1.pop();
+                                        res = calc.dividir(val2, val1);
                                         pila1.push(res);
                                         break;
                                     }
@@ -304,7 +306,9 @@ public class PostfixFactory {
                                         break;
 
                                     } else {
-                                        res = calc.dividir((double)pila2.remove(), (double)pila2.remove());
+                                        double val1 = (double)pila2.remove();
+                                        double val2 = (double)pila2.remove();
+                                        res = calc.dividir(val1, val2);
                                         pila2.add(res);
                                         break;
                                     }
@@ -335,7 +339,7 @@ public class PostfixFactory {
 
 
         }
-        System.out.println("Resultado final: " + Double.toString(res - 1));
+        System.out.println("Resultado final: " + Double.toString(res));
     }
     
     

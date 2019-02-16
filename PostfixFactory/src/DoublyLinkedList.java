@@ -106,12 +106,13 @@ public class DoublyLinkedList<E> extends AbstractList<E>{
 
     @Override
     public E remove() {
+       if (isEmpty()) return null;
        DoublyLinkedNode<E> temp = tail;
        tail = tail.previous();
        if (tail == null) {
            head = null;
        } else {
-           tail.setNext(null);
+           tail.setNext(head.value());
        }
        count--;
        return temp.value();

@@ -2,8 +2,7 @@
 /**
  * Interfaz para las operaciones de la calculadora de la HDT 2.
  *
- * @author Marco Flores 16260
- * @date 28-01-2019
+ * @author Ricardo
  */
 
 public interface iCalculadora {
