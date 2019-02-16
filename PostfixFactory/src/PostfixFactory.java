@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
 public class PostfixFactory {
     
     //final static String PATH_DATOS = "datos.txt";
-    final static String PATH_DATOS = "C:\\Users\\Satellite\\IdeaProjects\\UVGCC2003-05-Calculadora-Postfix-con-Patrones\\PostfixFactory\\build\\classes\\datos.txt";
+    final static String PATH_DATOS = "c:\\datos.txt";
     //identificador de los delimitadores para eliminarse en la informacion
     final static String DELIMITADOR = " \t\n\r\fABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz|°!\"#$%&()=?¡¿'\\´¨[]{}_-:.;,^`¬~";
     
@@ -71,10 +71,7 @@ public class PostfixFactory {
                     break;
                     
             }
-
         }
-        
-        
     }
     
    
@@ -215,9 +212,7 @@ public class PostfixFactory {
         //iPila pila = new Pila();
         
         iCalculadora calc = new Calculadora();
-        
-        
-        
+
         double res = 0;
         double a, b;
         int cont = 1;
