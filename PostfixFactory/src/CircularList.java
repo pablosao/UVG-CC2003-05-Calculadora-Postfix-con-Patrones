@@ -125,7 +125,22 @@ public class CircularList<E> extends AbstractList<E>{
 
     @Override
     public E remove() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (isEmpty()) return null;
+       Node<E> finger = tail;
+       while (finger.next() != tail) {
+           finger = finger.next();
+       }
+       // finger now points to second-to-last value
+       Node<E> temp = tail;
+       if (finger == tail)
+       {
+           tail = null;
+       } else {
+           finger.setNext(tail.next());
+           tail = finger;
+       }
+       count--;
+       return temp.value();
     }
 
     @Override

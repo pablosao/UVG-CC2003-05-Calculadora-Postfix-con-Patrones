@@ -106,7 +106,15 @@ public class DoublyLinkedList<E> extends AbstractList<E>{
 
     @Override
     public E remove() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       DoublyLinkedNode<E> temp = tail;
+       tail = tail.previous();
+       if (tail == null) {
+           head = null;
+       } else {
+           tail.setNext(null);
+       }
+       count--;
+       return temp.value();
     }
 
     @Override

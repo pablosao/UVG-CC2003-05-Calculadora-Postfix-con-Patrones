@@ -335,7 +335,7 @@ public class PostfixFactory {
 
 
         }
-        System.out.println("Resultado final: " + Double.toString(res));
+        System.out.println("Resultado final: " + Double.toString(res - 1));
     }
     
     
