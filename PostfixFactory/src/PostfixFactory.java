@@ -254,7 +254,7 @@ public class PostfixFactory {
 
                                     } else {
                                         res = calc.sumar((double)pila2.remove(), (double)pila2.remove());
-                                        pila2.addFirst(res);
+                                        pila2.add(res);
                                         break; //
                                     }
 
@@ -271,7 +271,7 @@ public class PostfixFactory {
 
                                     } else {
                                         res = calc.restar((double)pila2.remove(), (double)pila2.remove());
-                                        pila2.addFirst(res);
+                                        pila2.add(res);
                                         break;
                                     }
 
@@ -287,7 +287,7 @@ public class PostfixFactory {
 
                                     } else {
                                         res = calc.multiplicar((double)pila2.remove(), (double)pila2.remove());
-                                        pila2.addFirst(res);
+                                        pila2.add(res);
                                         break;
                                     }
 
@@ -304,7 +304,7 @@ public class PostfixFactory {
 
                                     } else {
                                         res = calc.dividir((double)pila2.remove(), (double)pila2.remove());
-                                        pila2.addFirst(res);
+                                        pila2.add(res);
                                         break;
                                     }
 
