@@ -97,12 +97,30 @@ public class SinglyLinkedList<E> extends AbstractList<E>
 
     @Override
     public E remove(E value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+     if (isEmpty()) return null;
+     Node<E> temp = head;
+     head = head.next(); // move head down list
+     count--;
+     return temp.value();    
     }
 
     @Override
     public void add(E value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+      // location for new value
+      Node<E> temp = new Node<E>(value,null);
+      if (head != null)
+     {
+         // pointer to possible tail
+         Node<E> finger = head;
+         while (finger.next() != null)
+         {
+                finger = finger.next();
+         }
+		 
+         finger.setNext(temp);
+      } else head = temp;
+	  
+	  count++;
     }
 
     @Override
