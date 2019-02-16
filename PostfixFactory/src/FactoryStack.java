@@ -15,7 +15,7 @@ public class FactoryStack<E> {
         }    
     public AbstractList<E> factoryList(String tipo){
         if (tipo.equals("SL")) {
-            return new SinglyLinkedList<E>();
+            return new SinglyLinkedList<>();
         }
         else if(tipo.equals("DL")){
             return new DoublyLinkedList<>();

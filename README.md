@@ -28,6 +28,12 @@ Para el UML
 * [Dia Diagram Editor](https://sourceforge.net/projects/dia-installer/)
 * [Microsoft Visio](https://products.office.com/es/visio/flowchart-software)  
 
+## Referencias
+
+Fue consultada la siguiete fuentes para la obtención del código de la implementacion de las listas:
+* Bailey, D. (2007). _Java Structures_. Williams College.
+
+
 ## Autores
 
 * **Pablo Sao** - [psao](https://github.com/psao)
