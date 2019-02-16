@@ -18,4 +18,5 @@ public abstract class AbstractList<E> implements List<E>
 	return -1 != indexOf(value);
   }
   
+  
 }

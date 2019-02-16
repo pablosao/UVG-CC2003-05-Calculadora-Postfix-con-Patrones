@@ -7,7 +7,7 @@
 public class SinglyLinkedList<E> extends AbstractList<E>
 {
 
-   protected int count; // list size
+   protected int count = 0; // list size
    protected Node<E> head; // ref. to first element
 
    public SinglyLinkedList()
@@ -123,7 +123,9 @@ public class SinglyLinkedList<E> extends AbstractList<E>
          }
 		 
          finger.setNext(temp);
-      } else head = temp;
+      } else{
+          head = temp;
+      }
 	  
 	  count++;
     }

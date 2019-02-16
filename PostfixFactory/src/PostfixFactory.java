@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
 public class PostfixFactory {
     
     //final static String PATH_DATOS = "datos.txt";
-    final static String PATH_DATOS = "C:\\Users\\Satellite\\IdeaProjects\\UVGCC2003-05-Calculadora-Postfix-con-Patrones\\PostfixFactory\\build\\classes\\datos.txt";
+    final static String PATH_DATOS = "c:\\datos.txt";
     //identificador de los delimitadores para eliminarse en la informacion
     final static String DELIMITADOR = " \t\n\r\fABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz|°!\"#$%&()=?¡¿'\\´¨[]{}_-:.;,^`¬~";
     
@@ -254,7 +254,7 @@ public class PostfixFactory {
 
                                     } else {
                                         res = calc.sumar((double)pila2.remove(), (double)pila2.remove());
-                                        pila2.add(res);
+                                        pila2.addFirst(res);
                                         break; //
                                     }
 
@@ -271,7 +271,7 @@ public class PostfixFactory {
 
                                     } else {
                                         res = calc.restar((double)pila2.remove(), (double)pila2.remove());
-                                        pila2.add(res);
+                                        pila2.addFirst(res);
                                         break;
                                     }
 
@@ -287,7 +287,7 @@ public class PostfixFactory {
 
                                     } else {
                                         res = calc.multiplicar((double)pila2.remove(), (double)pila2.remove());
-                                        pila2.add(res);
+                                        pila2.addFirst(res);
                                         break;
                                     }
 
@@ -304,7 +304,7 @@ public class PostfixFactory {
 
                                     } else {
                                         res = calc.dividir((double)pila2.remove(), (double)pila2.remove());
-                                        pila2.add(res);
+                                        pila2.addFirst(res);
                                         break;
                                     }
 
