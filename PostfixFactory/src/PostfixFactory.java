@@ -71,10 +71,7 @@ public class PostfixFactory {
                     break;
                     
             }
-
         }
-        
-        
     }
     
    
@@ -215,9 +212,7 @@ public class PostfixFactory {
         //iPila pila = new Pila();
         
         iCalculadora calc = new Calculadora();
-        
-        
-        
+
         double res = 0;
         double a, b;
         int cont = 1;
