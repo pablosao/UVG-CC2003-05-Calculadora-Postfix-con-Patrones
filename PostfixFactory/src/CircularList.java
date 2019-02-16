@@ -1,3 +1,9 @@
+/**
+ * Código tomado del libro Java Structures
+ * Bailey, D. (2007). Java Structures. Williams College.
+ * 
+ */
+
 public class CircularList<E> extends AbstractList<E>{
 
     protected Node<E> tail; 
