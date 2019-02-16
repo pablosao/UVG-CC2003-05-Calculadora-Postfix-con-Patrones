@@ -1,3 +1,10 @@
+
+/**
+ * Código tomado del libro Java Structures
+ * Bailey, D. (2007). Java Structures. Williams College.
+ * 
+ */
+
 public class DoublyLinkedNode<E>
 {
     protected E data;

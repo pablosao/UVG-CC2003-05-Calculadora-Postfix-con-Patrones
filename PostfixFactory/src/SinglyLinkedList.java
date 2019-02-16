@@ -1,3 +1,8 @@
+/**
+ * Código tomado del libro Java Structures
+ * Bailey, D. (2007). Java Structures. Williams College.
+ * 
+ */
 
 public class SinglyLinkedList<E> extends AbstractList<E>
 {
