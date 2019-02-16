@@ -24,6 +24,7 @@ public class PostfixFactory {
     /**
      * @param args the command line arguments
      */
+    @SuppressWarnings("unchecked")
     public static void main(String[] args) throws IOException {
         
         //Variable de control 
@@ -74,7 +75,7 @@ public class PostfixFactory {
         }
     }
     
-   
+   @SuppressWarnings("unchecked")
     private static void calcData1() throws IOException, FileNotFoundException{
         //iPila pila = new Pila();
         
@@ -207,7 +208,7 @@ public class PostfixFactory {
     }
     
     
-    
+    @SuppressWarnings("unchecked")
     private static void calcData2() throws IOException, FileNotFoundException{
         //iPila pila = new Pila();
         
@@ -315,7 +316,7 @@ public class PostfixFactory {
                     }
 
                 } else if (Character.isDigit(c)){
-                    pila2.remove((double)(c - '0'));
+                    pila2.add((double)(c - '0'));
                     //  Ya que estamos trabajando con Characters, tienen un valor en ascii
                     // al restarles char '0' restamos 50 y eso nos da el valor real.
                     // tambien podiamos usar Double.parseDouble pero esto es mas cool.
@@ -345,6 +346,7 @@ public class PostfixFactory {
      * 
      * @return String todos los datos ingresados en el archivo de texto 
      */
+    @SuppressWarnings("unchecked")
     public static String getDataFile() throws IOException, FileNotFoundException{
         
         BufferedReader reader;

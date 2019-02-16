@@ -130,10 +130,7 @@ public class SinglyLinkedList<E> extends AbstractList<E>
 	  count++;
     }
 
-    @Override
-    public E remove() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
     @Override
     public E get() {
@@ -161,6 +158,15 @@ public class SinglyLinkedList<E> extends AbstractList<E>
     }
 
     @Override
+    public E remove() {
+        if (isEmpty()) return null;
+        Node<E> temp = head;
+        head = head.next(); // move head down list
+        count--;
+        return temp.value();
+    }
+
+    @Override
     public void add(int i, E o) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -169,5 +175,6 @@ public class SinglyLinkedList<E> extends AbstractList<E>
     public E remove(int i) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
 
 }
