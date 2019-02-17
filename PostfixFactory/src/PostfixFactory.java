@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
 public class PostfixFactory {
     
     //final static String PATH_DATOS = "datos.txt";
-    final static String PATH_DATOS = "C:\\Users\\Satellite\\Documents\\U\\Orientacion a objetos\\datos.txt";
+    final static String PATH_DATOS = "c:\\datos.txt";
     //identificador de los delimitadores para eliminarse en la informacion
     final static String DELIMITADOR = " \t\n\r\fABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz|°!\"#$%&()=?¡¿'\\´¨[]{}_-:.;,^`¬~";
     
