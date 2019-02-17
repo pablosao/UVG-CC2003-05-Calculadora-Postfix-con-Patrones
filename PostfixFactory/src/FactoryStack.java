@@ -1,7 +1,7 @@
 
 /**
  *
- * @author Satellite
+ * @author Ricardo
  */
 public class FactoryStack<E> {
     public abstractPila factoryPila(String tipo){

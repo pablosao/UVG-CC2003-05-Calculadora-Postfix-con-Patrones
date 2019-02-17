@@ -4,14 +4,14 @@ import java.util.StringTokenizer;
 
 /**
  * 
- * @author Pablo Sao
+ * @author Pablo Sao, Ricardo Valenzuela
  * @version 1.3
  */
 
 public class PostfixFactory {
     
     //final static String PATH_DATOS = "datos.txt";
-    final static String PATH_DATOS = "c:\\datos.txt";
+    final static String PATH_DATOS = "C:\\Users\\Satellite\\Documents\\U\\Orientacion a objetos\\datos.txt";
     //identificador de los delimitadores para eliminarse en la informacion
     final static String DELIMITADOR = " \t\n\r\fABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz|°!\"#$%&()=?¡¿'\\´¨[]{}_-:.;,^`¬~";
     
@@ -29,6 +29,7 @@ public class PostfixFactory {
         
         //Variable de control 
         boolean control_global = true;
+        boolean isDouble = false;
         
         //Iniciando el programa con el menu
         
@@ -56,15 +57,16 @@ public class PostfixFactory {
                     break;
                 case 3:
                     pila2 = FACTORY.factoryList("SL");
-                    calcData2();
+                    calcData2(isDouble);
                     break;
                 case 4:
                     pila2 = FACTORY.factoryList("CL");
-                    calcData2();
+                    calcData2(isDouble);
                     break;
                 case 5:
+                    isDouble = true;
                     pila2 = FACTORY.factoryList("DL");
-                    calcData2();
+                    calcData2(isDouble);
                     break;
                 case 6:
                     System.out.println("\n\n\tSaliendo del cálculo");
@@ -211,7 +213,7 @@ public class PostfixFactory {
     
     
     @SuppressWarnings("unchecked")
-    private static void calcData2() throws IOException, FileNotFoundException{
+    private static void calcData2(boolean isDouble) throws IOException, FileNotFoundException{
         //iPila pila = new Pila();
         
         iCalculadora calc = new Calculadora();
@@ -304,13 +306,20 @@ public class PostfixFactory {
                                     if (pila2.size() == 1){
                                         //  es el ultimo valor
                                         break;
-
                                     } else {
-                                        double val1 = (double)pila2.remove();
-                                        double val2 = (double)pila2.remove();
-                                        res = calc.dividir(val1, val2);
-                                        pila2.add(res);
-                                        break;
+                                        if(isDouble){
+                                            double val1 = (double)pila2.remove();
+                                            double val2 = (double)pila2.remove();
+                                            res = calc.dividir(val2, val1);
+                                            pila2.add(res);
+                                            break;
+                                         }else{
+                                            double val1 = (double)pila2.remove();
+                                            double val2 = (double)pila2.remove();
+                                            res = calc.dividir(val1, val2);
+                                            pila2.add(res);
+                                            break;
+                                        }
                                     }
 
                                 }
